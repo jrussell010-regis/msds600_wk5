@@ -9306,7 +9306,7 @@ memory usage: 408.0+ bytes
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [217]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Ridge Classifier:'</span><span class="p">)</span>
@@ -9314,11 +9314,11 @@ memory usage: 408.0+ bytes
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Gradient Boosting Classifier:'</span><span class="p">)</span>
 <span class="o">%</span><span class="k">run</span> predictChurn_v2.py Data/new_churn_data_cleaned.csv Models/GBC
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Ada Boost Classifier:'</span><span class="p">)</span>
-<span class="o">%</span><span class="k">run</span> predictChurn.py Data/new_churn_data_cleaned.csv Models/ADA
+<span class="o">%</span><span class="k">run</span> predictChurn_v2.py Data/new_churn_data_cleaned.csv Models/ADA
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Logistic Regression:'</span><span class="p">)</span>
-<span class="o">%</span><span class="k">run</span> predictChurn.py Data/new_churn_data_cleaned.csv Models/LR
+<span class="o">%</span><span class="k">run</span> predictChurn_v2.py Data/new_churn_data_cleaned.csv Models/LR
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Naive Bayes:'</span><span class="p">)</span>
-<span class="o">%</span><span class="k">run</span> predictChurn.py Data/new_churn_data_cleaned.csv Models/NB
+<span class="o">%</span><span class="k">run</span> predictChurn_v2.py Data/new_churn_data_cleaned.csv Models/NB
 </pre></div>
 </div>
 </div>
@@ -9367,13 +9367,13 @@ Transformation Pipeline and Model Successfully Loaded
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>predictions:
-customerID
-9305-CKSKC       Churn
-1452-KNGVK    No churn
-6723-OKKJM    No churn
-7832-POPKP    No churn
-6348-TACGU    No churn
-Name: Churn_prediction, dtype: object
+           Churn_prediction  Churn_probability
+customerID                                    
+9305-CKSKC            Churn             0.6965
+1452-KNGVK         No churn             0.8840
+6723-OKKJM         No churn             0.8609
+7832-POPKP         No churn             0.5429
+6348-TACGU         No churn             0.9489
 
 Ada Boost Classifier:
 Transformation Pipeline and Model Successfully Loaded
@@ -9389,13 +9389,13 @@ Transformation Pipeline and Model Successfully Loaded
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>predictions:
-customerID
-9305-CKSKC       Churn
-1452-KNGVK    No churn
-6723-OKKJM    No churn
-7832-POPKP    No churn
-6348-TACGU    No churn
-Name: Churn_prediction, dtype: object
+           Churn_prediction  Churn_probability
+customerID                                    
+9305-CKSKC            Churn             0.5021
+1452-KNGVK         No churn             0.5087
+6723-OKKJM         No churn             0.5100
+7832-POPKP         No churn             0.5017
+6348-TACGU         No churn             0.5157
 
 Logistic Regression:
 Transformation Pipeline and Model Successfully Loaded
@@ -9411,13 +9411,13 @@ Transformation Pipeline and Model Successfully Loaded
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>predictions:
-customerID
-9305-CKSKC       Churn
-1452-KNGVK    No churn
-6723-OKKJM    No churn
-7832-POPKP    No churn
-6348-TACGU    No churn
-Name: Churn_prediction, dtype: object
+           Churn_prediction  Churn_probability
+customerID                                    
+9305-CKSKC            Churn             0.5572
+1452-KNGVK         No churn             0.5788
+6723-OKKJM         No churn             0.9349
+7832-POPKP         No churn             0.8079
+6348-TACGU         No churn             0.8776
 
 Naive Bayes:
 Transformation Pipeline and Model Successfully Loaded
@@ -9433,13 +9433,13 @@ Transformation Pipeline and Model Successfully Loaded
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>predictions:
-customerID
-9305-CKSKC       Churn
-1452-KNGVK    No churn
-6723-OKKJM    No churn
-7832-POPKP    No churn
-6348-TACGU    No churn
-Name: Churn_prediction, dtype: object
+           Churn_prediction  Churn_probability
+customerID                                    
+9305-CKSKC            Churn             0.9030
+1452-KNGVK         No churn             0.7259
+6723-OKKJM         No churn             0.7927
+7832-POPKP         No churn             0.6954
+6348-TACGU         No churn             1.0000
 </pre>
 </div>
 </div>
@@ -9527,7 +9527,7 @@ Name: Churn_prediction, dtype: object
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [219]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span><span class="s2">"Russell_Josh_Assignment5.ipynb"</span>
@@ -9544,7 +9544,7 @@ Name: Churn_prediction, dtype: object
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>[NbConvertApp] Converting notebook Russell_Josh_Assignment5.ipynb to html
-[NbConvertApp] Writing 366454 bytes to Russell_Josh_Assignment5.html
+[NbConvertApp] Writing 371497 bytes to Russell_Josh_Assignment5.html
 </pre>
 </div>
 </div>

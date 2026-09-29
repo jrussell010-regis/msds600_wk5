@@ -3,9 +3,6 @@ import pandas as pd
 from pycaret.classification import predict_model, load_model
 
 class ChurnPredictor:
-    #def __init__(self, model_path):
-    #    self.model = load_model(model_path)
-
     def __init__(self, model_path, train_path=None):
         self.model = load_model(model_path)
         self.train_probability = None
@@ -34,10 +31,7 @@ class ChurnPredictor:
         predictions = predict_model(self.model, data=df)
 
         predictions.rename(
-            {
-                'prediction_label': 'Churn_prediction',
-                'prediction_score': 'Churn_probability'
-            },
+            {'prediction_label': 'Churn_prediction', 'prediction_score': 'Churn_probability'},
             axis=1,
             inplace=True
         )
